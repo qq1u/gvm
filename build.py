@@ -28,7 +28,7 @@ def mkdir(path):
 def build(tag, system, arch):
     start = datetime.now()
     print(f"Start build {tag} {system} {arch} at {start}")
-    target_dir = dist_dir / f"gvm{tag}_{system}_{arch}" / "gvm"  # gvm0.0.1_windows_amd64/gvm/gvm.exe
+    target_dir = dist_dir / f"gvm_{system}_{arch}" / "gvm"  # gvm0.0.1_windows_amd64/gvm/gvm.exe
     mkdir(target_dir)
     env = os.environ.copy()
     env.update({"GOOS": system, "GOARCH": arch, "CGO_ENABLED": "0"})
