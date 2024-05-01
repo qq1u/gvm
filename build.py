@@ -39,7 +39,7 @@ def build(tag, system, arch):
         "build",
         "-C",
         r"gvm\cmd",
-        f'-ldflags=-w -s -X gvm/gvm.VERSION={tag}',
+        f'-ldflags=-w -s -X gvm.VERSION={tag}',
         "-o",
         output,
     ]
@@ -58,6 +58,8 @@ def main():
     parser.add_argument("--os", type=str, default=None)
     parser.add_argument("--arch", type=str, default=None)
     kwargs = parser.parse_args()
+
+    shutil.rmtree(dist_dir, ignore_errors=True)
 
     system_list = [System.WINDOWS, System.DARWIN, System.LINUX]
     os_ = kwargs.os
