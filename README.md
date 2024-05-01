@@ -16,7 +16,7 @@ Go Version Manager
 2. Specify the version to install GO (example: 1.22.2)
     - `gvm install 1.22.2`
 
-3. View the current go version
+3. View the current GO version
     - `gvm version`
 
 4. Install other versions of GO (example: 1.22.1)
