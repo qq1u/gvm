@@ -34,16 +34,15 @@ def build(tag, system, arch):
     env.update({"GOOS": system, "GOARCH": arch, "CGO_ENABLED": "0"})
     output = target_dir / "gvm.exe" if system == System.WINDOWS else target_dir / "gvm"
 
+    cwd = current_dir / "gvm" / "cmd"
     cmd = [
         "go",
         "build",
-        "-C",
-        r"gvm\cmd",
         f'-ldflags=-w -s -X gvm.VERSION={tag}',
         "-o",
-        output,
+        str(output),
     ]
-    subprocess.run(cmd, shell=True, env=env)
+    subprocess.run(cmd, env=env, cwd=cwd)
 
     shutil.make_archive(str(target_dir.parent), "zip", target_dir.parent)
     shutil.rmtree(target_dir.parent)
