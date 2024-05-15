@@ -32,7 +32,7 @@ func newConfig() *config {
 		util.PrintlnExit("Get current user failed: %v", err)
 	}
 
-	p := filepath.Join(u.HomeDir, "gvm.json")
+	p := filepath.Join(u.HomeDir, ".gvm.json")
 	conf := &config{
 		path:    p,
 		BaseURL: mirrors[0],
