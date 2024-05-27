@@ -2,4 +2,4 @@
 
 package util
 
-var profile = "~/.zshrc"
+var profile = "~/.zprofile"
