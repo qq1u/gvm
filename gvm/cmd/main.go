@@ -2,10 +2,10 @@ package main
 
 import (
 	"fmt"
-	"gvm"
 	"os"
 
-	"gvm/util"
+	"github.com/qq1u/gvm"
+	"github.com/qq1u/gvm/util"
 )
 
 func main() {

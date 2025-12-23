@@ -6,7 +6,7 @@ import (
 	"os/user"
 	"path/filepath"
 
-	"gvm/util"
+	"github.com/qq1u/gvm/util"
 )
 
 var (

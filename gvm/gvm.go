@@ -12,7 +12,7 @@ import (
 	"strconv"
 	"strings"
 
-	"gvm/util"
+	"github.com/qq1u/gvm/util"
 )
 
 var VERSION = "" // gvm version
